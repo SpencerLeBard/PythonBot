@@ -40,6 +40,7 @@ class PagePoller:
         self.createBrowser()
 
 
+# NOTE WHAT IS "r"
 textFile = open("bestbuy-links1.txt", "r")
 lines = textFile.readlines()
 print(lines)
