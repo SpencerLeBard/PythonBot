@@ -3,13 +3,16 @@ import time
 from selenium import webdriver
 
 
-driver = webdriver.Firefox()
+# driver = webdriver.Firefox()
 
 # happy case - item is available
 # driver.get("https://www.bestbuy.com/site/nvidia-titan-rtx-24gb-gddr6-pci-express-3-0-graphics-card/6320585.p?skuId=6320585")
 
 
-driver.get("https://www.bestbuy.com/site/nvidia-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429440.p?skuId=6429440")
+driver = webdriver.Firefox(
+    executable_path=r'C:\Users\sleba\AppData\Local\Programs\geckodriver-v0.28.0-win64\geckodriver.exe')
+driver.get(
+    'https://www.bestbuy.com/site/dynex-6-hdmi-cable-black/6405508.p?skuId=6405508')
 
 
 class PagePoller:
@@ -26,37 +29,37 @@ class PagePoller:
             addToCartButton.click()
             return True
 
-    def createBrowser(self):
-        self.driver = webdriver.Firefox()
-        self.driver.get(self.url)
+    # def createBrowser(self):
+    #     self.driver = webdriver.Firefox()
+    #     self.driver.get(self.url)
 
-    def refreshPage(self):
-        self.driver.close()
-        self.driver.quit()
-        self.createBrowser()
+    # def refreshPage(self):
+    #     self.driver.close()
+    #     self.driver.quit()
+    #     self.createBrowser()
 
 
-textFile = open("bestbuy-links1.txt", "r")
-lines = textFile.readlines()
-print(lines)
+# textFile = open("bestbuy-links1.txt", "r")
+# lines = textFile.readlines()
+# print(lines)
 
-pages = []
-for u in lines:
-    pages.append(PagePoller(u))
+# pages = []
+# for u in lines:
+#     pages.append(PagePoller(u))
 
-while True:
-    toRemove = []
-    for p in pages:
-        if (p.checkAvailable()):
-            pagerduty.sendPagerDutyAlert()
-            toRemove.append(p)
-        else:
-            p.refreshPage()
+# while True:
+#     toRemove = []
+#     for p in pages:
+#         if (p.checkAvailable()):
+#             pagerduty.sendPagerDutyAlert()
+#             toRemove.append(p)
+#         else:
+#             p.refreshPage()
 
-    for p in toRemove:
-        pages.remove(p)
+#     for p in toRemove:
+#         pages.remove(p)
 
-time.sleep(0)
+# time.sleep(0)
 
 
 # good
