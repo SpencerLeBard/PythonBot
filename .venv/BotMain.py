@@ -1,8 +1,9 @@
 from selenium import webdriver
 import time
-from pudb import set_trace
-set_trace()
+# from pudb
+# pdb.set_trace()
 # Set breakpoint() in Python to call pudb
+# export PYTHONBREAKPOINT = "pudb.set_trace"
 
 # import pagerduty
 
@@ -25,7 +26,7 @@ class PagePoller:
         self.createBrowser()
 
     def checkAvailable(self):
-        addToCartButton = self.driver.find_element_by_class_name(
+        addToCartButton = addButton = self.driver.find_element_by_class_name(
             "add-to-cart-button")
         if ("btn-disabled" in addToCartButton.get_attribute("class")):
             return False
@@ -44,7 +45,9 @@ class PagePoller:
 
 
 # NOTE WHAT IS "r"
-# textFile = open("bestbuy-links1.txt", "r")
+# breakpoint()
+# textFile = open(
+#     "C:\source\codeworks\sideprojects\pythonbot\bestbuy-links1.txt", "r")
 # lines = textFile.readlines()
 # print(lines)
 
@@ -64,13 +67,11 @@ class PagePoller:
 #     for p in toRemove:
 #         pages.remove(p)
 
-# time.sleep(0)
-
 
 # good
-# <button class="btn btn-primary btn-lg btn-block btn-leading-ficon add-to-cart-button" type="button" style="padding:0 8px">
-# </button>
+# <button class = "btn btn-primary btn-lg btn-block btn-leading-ficon add-to-cart-button" type = "button" style = "padding:0 8px" >
+# </button >
 
 
 # bad
-# <button class="btn btn-disabled btn-lg btn-block add-to-cart-button" disabled="" type="button" style="padding: 0px 8px;">Sold Out</button>
+# <button class = "btn btn-disabled btn-lg btn-block add-to-cart-button" disabled = "" type = "button" style = "padding: 0px 8px;" > Sold Out < /button >
