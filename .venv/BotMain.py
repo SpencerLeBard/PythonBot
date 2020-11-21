@@ -1,6 +1,7 @@
 import time
 
 from selenium import webdriver
+# import pagerduty
 
 
 # driver = webdriver.Firefox()
@@ -29,37 +30,37 @@ class PagePoller:
             addToCartButton.click()
             return True
 
-    # def createBrowser(self):
-    #     self.driver = webdriver.Firefox()
-    #     self.driver.get(self.url)
+    def createBrowser(self):
+        self.driver = webdriver.Firefox()
+        self.driver.get(self.url)
 
-    # def refreshPage(self):
-    #     self.driver.close()
-    #     self.driver.quit()
-    #     self.createBrowser()
+    def refreshPage(self):
+        self.driver.close()
+        self.driver.quit()
+        self.createBrowser()
 
 
-# textFile = open("bestbuy-links1.txt", "r")
-# lines = textFile.readlines()
-# print(lines)
+textFile = open("bestbuy-links1.txt", "r")
+lines = textFile.readlines()
+print(lines)
 
-# pages = []
-# for u in lines:
-#     pages.append(PagePoller(u))
+pages = []
+for u in lines:
+    pages.append(PagePoller(u))
 
-# while True:
-#     toRemove = []
-#     for p in pages:
-#         if (p.checkAvailable()):
-#             pagerduty.sendPagerDutyAlert()
-#             toRemove.append(p)
-#         else:
-#             p.refreshPage()
+while True:
+    toRemove = []
+    for p in pages:
+        if (p.checkAvailable()):
+            pagerduty.sendPagerDutyAlert()
+            toRemove.append(p)
+        else:
+            p.refreshPage()
 
-#     for p in toRemove:
-#         pages.remove(p)
+    for p in toRemove:
+        pages.remove(p)
 
-# time.sleep(0)
+time.sleep(0)
 
 
 # good
