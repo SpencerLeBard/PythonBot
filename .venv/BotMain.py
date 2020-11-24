@@ -10,25 +10,27 @@ driver = webdriver.Firefox(
 driver.get(
     'https://www.bestbuy.com/site/dynex-6-hdmi-cable-black/6405508.p?skuId=6405508')
 
-foundButton = False
+add_to_cart_button = False
 
-while not foundButton:
+while not add_to_cart_button:
 
     addToCartButton = driver.find_element_by_class_name(
         "add-to-cart-button")
-
     if("btn-disabled" in addToCartButton.get_attribute("class")):
         time.sleep(3)
         driver.refresh()
     else:
-        foundButton = True
+        add_to_cart_button = True
         addToCartButton.click()
 
-window_after = driver.window_handles[1]
-driver.switch_to.window(window_after)
+# time.sleep(5)
 
-checkoutButton = driver.find_element_by_class_name(
-    "add-to-cart-button")
+# found_checkout_button = False
+# checkout_button = driver.find_element_by_link_text(
+#     "Checkout")
+# if("btn-primary" in checkout_button.get_attribute("class")):
+#     found_checkout_button = True
+#     checkout_button.click()
 
 
 # def checkAvailable(self):
