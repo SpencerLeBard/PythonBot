@@ -2101,3 +2101,36 @@ Can't find symbol 'eglSetDamageRegionKHR'.
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1606249340781	geckodriver	INFO	Listening on 127.0.0.1:58974
+1606249343829	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\sleba\\AppData\\Local\\Temp\\rust_mozprofileW9RO1a"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606249348973	Marionette	INFO	Listening on port 58982
+1606249349084	Marionette	WARN	TLS certificate errors will be ignored for this session
+1606249361063	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:228:19
+TimedPromise@chrome://marionette/content/sync.js:213:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+JavaScript error: https://www.bestbuy.com/~assets/bby/_com/shop/social-share/dist/client/client-1820914b43e413b8542d10e3e37aaf36.mjs, line 1: ChunkLoadError: Loading chunk 1 failed.
+(error: https://www.bestbuy.com/~assets/bby/_com/shop/social-share/dist/client/1-1820914b43e413b8542d10e3e37aaf36.mjs)
+JavaScript error: https://www.bestbuy.com/~assets/bby/_com/shop/shelf-display/dist/client/client-50c77740dbfffea0afa989e6e916f850.mjs, line 1: ChunkLoadError: Loading chunk 1 failed.
+(error: https://www.bestbuy.com/~assets/bby/_com/shop/shelf-display/dist/client/1-50c77740dbfffea0afa989e6e916f850.mjs)
+JavaScript error: https://assets.bbystatic.com/vendor/gvp-6222ccf1bcf5139d2c8b2b3affee0b87.min.js, line 158: Invariant Violation: Minified React error #200; visit https://reactjs.org/docs/error-decoder.html?invariant=200 for the full message or use the non-minified dev environment for full errors and additional helpful warnings. 
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1606249404112	Marionette	INFO	Stopped listening on port 58982
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

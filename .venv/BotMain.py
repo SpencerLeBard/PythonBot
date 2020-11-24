@@ -14,7 +14,7 @@ foundButton = False
 
 while not foundButton:
 
-    addToCartButton = addButton = driver.find_element_by_class_name(
+    addToCartButton = driver.find_element_by_class_name(
         "add-to-cart-button")
 
     if("btn-disabled" in addToCartButton.get_attribute("class")):
@@ -23,6 +23,12 @@ while not foundButton:
     else:
         foundButton = True
         addToCartButton.click()
+
+window_after = driver.window_handles[1]
+driver.switch_to.window(window_after)
+
+checkoutButton = driver.find_element_by_class_name(
+    "add-to-cart-button")
 
 
 # def checkAvailable(self):
