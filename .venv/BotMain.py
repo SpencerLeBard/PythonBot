@@ -1,24 +1,35 @@
 from selenium import webdriver
 import time
-# from pudb
-# pdb.set_trace()
-# Set breakpoint() in Python to call pudb
-# export PYTHONBREAKPOINT = "pudb.set_trace"
-
-# driver = webdriver.Firefox()
 
 driver = webdriver.Firefox(
     executable_path=r'C:\Users\sleba\AppData\Local\Programs\geckodriver-v0.28.0-win64\geckodriver.exe')
+# NOTE PS5
+# driver.get(
+#     'https://www.bestbuy.com/site/sony-playstation-5-console/6426149.p?skuId=6426149')
+# NOTE HDMI CORD
 driver.get(
     'https://www.bestbuy.com/site/dynex-6-hdmi-cable-black/6405508.p?skuId=6405508')
 
+foundButton = False
 
-def checkAvailable(self):
-    button = self.driver.find_element_by_xpath(
-        "/html[1]/body[1]/div[3]/main[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/button[1]")
-    button.click()
-    checkAvailable(self)
+while not foundButton:
 
+    addToCartButton = addButton = driver.find_element_by_class_name(
+        "add-to-cart-button")
+
+    if("btn-disabled" in addToCartButton.get_attribute("class")):
+        time.sleep(3)
+        driver.refresh()
+    else:
+        foundButton = True
+        addToCartButton.click()
+
+
+# def checkAvailable(self):
+#     button = self.driver.find_element_by_xpath(
+#         "/html[1]/body[1]/div[3]/main[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/button[1]")
+#     button.click()
+#     checkAvailable(self)
 
 # class PagePoller:
 #     def __init__(self, url):
