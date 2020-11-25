@@ -10,9 +10,9 @@ driver = webdriver.Firefox(
 driver.get(
     'https://www.bestbuy.com/site/dynex-6-hdmi-cable-black/6405508.p?skuId=6405508')
 
-add_to_cart_button = False
+found_add_to_cart_button = False
 
-while not add_to_cart_button:
+while not found_add_to_cart_button:
 
     addToCartButton = driver.find_element_by_class_name(
         "add-to-cart-button")
@@ -20,18 +20,26 @@ while not add_to_cart_button:
         time.sleep(3)
         driver.refresh()
     else:
-        add_to_cart_button = True
+        found_add_to_cart_button = True
         addToCartButton.click()
+        time.sleep(10)
 
-# time.sleep(5)
 
-# found_checkout_button = False
-# checkout_button = driver.find_element_by_link_text(
-#     "Checkout")
-# if("btn-primary" in checkout_button.get_attribute("class")):
-#     found_checkout_button = True
-#     checkout_button.click()
+found_checkout_button = False
 
+while not found_checkout_button:
+
+    checkout_button = driver.find_element_by_xpath(
+        "/html[1]/body[1]/div[1]/main[1]/div[1]/div[2]/div[1]/div[1]/div[1]/span[1]/div[1]/div[2]/div[1]/section[2]/div[1]/div[1]/div[3]/div[1]/div[1]/button[1]")
+    if("btn-disabled" in checkout_button.get_attribute("class")):
+        time.sleep(3)
+        driver.refresh()
+    else:
+        found_checkout_button = True
+        checkout_button.click()
+
+
+# /html[1]/body[1]/div[1]/main[1]/div[1]/div[2]/div[1]/div[1]/div[1]/span[1]/div[1]/div[2]/div[1]/section[2]/div[1]/div[1]/div[3]/div[1]/div[1]/button[1]
 
 # def checkAvailable(self):
 #     button = self.driver.find_element_by_xpath(
