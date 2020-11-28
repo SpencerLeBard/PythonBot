@@ -59,13 +59,109 @@ while not found_continue_as_guest_button:
     else:
         found_continue_as_guest_button = True
         continue_as_guest_button.click()
+        time.sleep(7)
+
+# NOTE <------------ INPUT CONTACT INFO ------------------->
+
+first_name_input = driver.find_element_by_xpath(
+    "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[2]/form[1]/section[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[2]/div[1]/section[1]/section[1]/div[1]/label[1]/div[1]/input[1]")
+first_name_input.click()
+first_name_input.clear()
+first_name_input_string = "Spencer"
+for char in first_name_input_string:
+    first_name_input.send_keys(char)
+
+time.sleep(1)
+
+last_name_input = driver.find_element_by_xpath(
+    "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[2]/form[1]/section[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[2]/div[1]/section[1]/section[1]/div[2]/label[1]/div[1]/input[1]")
+last_name_input.click()
+last_name_input.clear()
+last_name_input_string = "LeBard"
+for char in last_name_input_string:
+    last_name_input.send_keys(char)
+
+time.sleep(1)
+
+address_input = driver.find_element_by_xpath(
+    "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[2]/form[1]/section[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[2]/div[1]/section[1]/section[1]/div[3]/label[1]/div[2]/div[1]/div[1]/input[1]")
+address_input.click()
+address_input.clear()
+address_input_string = "69th street america"
+for char in address_input_string:
+    address_input.send_keys(char)
+
+time.sleep(1)
+
+city_input = driver.find_element_by_xpath(
+    "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[2]/form[1]/section[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[2]/div[1]/section[1]/section[1]/div[5]/div[1]/div[1]/label[1]/div[1]/input[1]")
+city_input.click()
+city_input.clear()
+city_input_string = "Boise"
+for char in city_input_string:
+    city_input.send_keys(char)
+
+time.sleep(1)
+
+zip_input = driver.find_element_by_xpath(
+    "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[2]/form[1]/section[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[2]/div[1]/section[1]/section[1]/div[6]/div[1]/div[1]/label[1]/div[1]/input[1]")
+zip_input.click()
+zip_input.clear()
+zip_input_string = "69696"
+for char in zip_input_string:
+    zip_input.send_keys(char)
+
+time.sleep(1)
+
+email_input = driver.find_element_by_xpath(
+    "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[2]/form[1]/section[1]/div[1]/div[2]/div[1]/section[1]/div[2]/label[1]/div[1]/input[1]")
+email_input.click()
+email_input.clear()
+email_input_string = "slebard69@gmail.com"
+for char in email_input_string:
+    email_input.send_keys(char)
+
+time.sleep(1)
+
+phone_input = driver.find_element_by_xpath(
+    "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[2]/form[1]/section[1]/div[1]/div[2]/div[1]/section[1]/div[3]/label[1]/div[1]/input[1]")
+phone_input.click()
+phone_input.clear()
+phone_input_string = "208-696-6969"
+for char in phone_input_string:
+    phone_input.send_keys(char)
+
+time.sleep(1)
+
+state_input = driver.find_element_by_xpath(
+    "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[2]/form[1]/section[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[2]/div[1]/section[1]/section[1]/div[5]/div[1]/div[2]/label[1]/div[1]/div[1]/select[1]")
+state_input.click()
+state_input_string = "I"
+state_input.send_keys(state_input_string)
+state_input.click
+
+time.sleep(1)
+
+continue_to_payment__info_button = driver.find_element_by_xpath(
+    "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[2]/form[1]/section[1]/div[1]/div[2]/div[1]/div[1]/button[1]")
+continue_to_payment__info_button.click()
+
+time.sleep(5)
+
+continue_to_payment__info_button_confirm = driver.find_element_by_xpath(
+    "/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/button[1]")
+continue_to_payment__info_button_confirm.click()
+
+time.sleep(5)
 
 
-# def checkAvailable(self):
-#     button = self.driver.find_element_by_xpath(
-#         "/html[1]/body[1]/div[3]/main[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/button[1]")
-#     button.click()
-#     checkAvailable(self)
+card_number_input = driver.find_element_by_xpath(
+    "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[2]/form[1]/section[1]/div[1]/div[2]/div[1]/section[1]/div[3]/label[1]/div[1]/input[1]")
+card_number_input.click()
+card_number_input.clear()
+card_number_input_string = "6969696969696969"
+for char in card_number_input_string:
+    card_number_input.send_keys(char)
 
 # class PagePoller:
 #     def __init__(self, url):
