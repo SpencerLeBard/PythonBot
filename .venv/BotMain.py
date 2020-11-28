@@ -51,8 +51,8 @@ found_continue_as_guest_button = False
 
 while not found_continue_as_guest_button:
 
-    continue_as_guest_button = driver.find_element_by_class_name(
-        "cia-guest-content_continue guest")
+    continue_as_guest_button = driver.find_element_by_xpath(
+        "/html[1]/body[1]/div[1]/div[1]/section[1]/main[1]/div[4]/div[1]/div[2]/button[1]")
     if("btn-disabled" in continue_as_guest_button.get_attribute("class")):
         time.sleep(3)
         driver.refresh()
