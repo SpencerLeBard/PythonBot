@@ -61,6 +61,7 @@ while not found_continue_as_guest_button:
         continue_as_guest_button.click()
         time.sleep(7)
 
+
 # NOTE <------------ INPUT CONTACT INFO ------------------->
 
 first_name_input = driver.find_element_by_xpath(
@@ -148,20 +149,32 @@ continue_to_payment__info_button.click()
 
 time.sleep(5)
 
+
+# NOTE <----------- ADDRESS CONFIRMATION ------------>
+
 continue_to_payment__info_button_confirm = driver.find_element_by_xpath(
     "/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/button[1]")
 continue_to_payment__info_button_confirm.click()
 
-time.sleep(5)
+time.sleep(10)
 
+
+# NOTE <----------- PAYMENT INPUT ------------>
 
 card_number_input = driver.find_element_by_xpath(
-    "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[2]/form[1]/section[1]/div[1]/div[2]/div[1]/section[1]/div[3]/label[1]/div[1]/input[1]")
+    "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[3]/div[1]/section[1]/div[1]/div[1]/section[1]/div[1]/div[1]/input[1]")
 card_number_input.click()
 card_number_input.clear()
 card_number_input_string = "6969696969696969"
 for char in card_number_input_string:
     card_number_input.send_keys(char)
+
+time.sleep(1)
+
+place_order_button = driver.find_element_by_xpath(
+    "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[3]/div[1]/section[1]/div[3]/button[1]")
+place_order_button.click()
+
 
 # class PagePoller:
 #     def __init__(self, url):
