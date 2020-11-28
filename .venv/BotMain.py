@@ -10,6 +10,10 @@ driver = webdriver.Firefox(
 driver.get(
     'https://www.bestbuy.com/site/dynex-6-hdmi-cable-black/6405508.p?skuId=6405508')
 
+time.sleep(2)
+
+# NOTE <-------- FIND ADD TO CART BUTTON -------->
+
 found_add_to_cart_button = False
 
 while not found_add_to_cart_button:
@@ -25,6 +29,8 @@ while not found_add_to_cart_button:
         time.sleep(10)
 
 
+# NOTE <-------- FIND CHECKOUT BUTTON --------->
+
 found_checkout_button = False
 
 while not found_checkout_button:
@@ -37,9 +43,23 @@ while not found_checkout_button:
     else:
         found_checkout_button = True
         checkout_button.click()
+        time.sleep(10)
 
+# NOTE <----------- FIND CONTIUNUE AS GUEST BUTTON ------------>
 
-# /html[1]/body[1]/div[1]/main[1]/div[1]/div[2]/div[1]/div[1]/div[1]/span[1]/div[1]/div[2]/div[1]/section[2]/div[1]/div[1]/div[3]/div[1]/div[1]/button[1]
+found_continue_as_guest_button = False
+
+while not found_continue_as_guest_button:
+
+    continue_as_guest_button = driver.find_element_by_class_name(
+        "cia-guest-content_continue guest")
+    if("btn-disabled" in continue_as_guest_button.get_attribute("class")):
+        time.sleep(3)
+        driver.refresh()
+    else:
+        found_continue_as_guest_button = True
+        continue_as_guest_button.click()
+
 
 # def checkAvailable(self):
 #     button = self.driver.find_element_by_xpath(
@@ -74,12 +94,3 @@ while not found_checkout_button:
 #     else:
 #         addToCartButton.click()
 #         return True
-
-
-# good
-# <button class = "btn btn-primary btn-lg btn-block btn-leading-ficon add-to-cart-button" type = "button" style = "padding:0 8px" >
-# </button >
-
-
-# bad
-# <button class = "btn btn-disabled btn-lg btn-block add-to-cart-button" disabled = "" type = "button" style = "padding: 0px 8px;" > Sold Out < /button >
