@@ -193,13 +193,3 @@ place_order_button.click()
 #     def checkAvailable(self):
 #         self.driver.find_element_by_xpath(
 #             "//button[@data-sku-id='6405508'].click()")
-
-
-# def checkAvailable(self):
-#     addToCartButton = self.driver.find_element_by_class_name(
-#         "add-to-cart-button")
-#     if ("btn-disabled" in addToCartButton.get_attribute("class")):
-#         return False
-#     else:
-#         addToCartButton.click()
-#         return True
