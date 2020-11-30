@@ -4,11 +4,11 @@ import time
 driver = webdriver.Firefox(
     executable_path=r'C:\Users\sleba\AppData\Local\Programs\geckodriver-v0.28.0-win64\geckodriver.exe')
 # NOTE PS5
-# driver.get(
-#     'https://www.bestbuy.com/site/sony-playstation-5-console/6426149.p?skuId=6426149')
-# NOTE HDMI CORD
 driver.get(
-    'https://www.bestbuy.com/site/dynex-6-hdmi-cable-black/6405508.p?skuId=6405508')
+    'https://www.bestbuy.com/site/sony-playstation-5-console/6426149.p?skuId=6426149')
+# NOTE HDMI CORD
+# driver.get(
+#     'https://www.bestbuy.com/site/dynex-6-hdmi-cable-black/6405508.p?skuId=6405508')
 
 time.sleep(2)
 
@@ -21,7 +21,7 @@ while not found_add_to_cart_button:
     addToCartButton = driver.find_element_by_class_name(
         "add-to-cart-button")
     if("btn-disabled" in addToCartButton.get_attribute("class")):
-        time.sleep(3)
+        time.sleep(2)
         driver.refresh()
     else:
         found_add_to_cart_button = True
