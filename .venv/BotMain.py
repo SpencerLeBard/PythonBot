@@ -175,6 +175,8 @@ place_order_button = driver.find_element_by_xpath(
     "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/main[1]/div[2]/div[3]/div[1]/section[1]/div[3]/button[1]")
 place_order_button.click()
 
+# console.log confirm y or n?
+
 
 # class PagePoller:
 #     def __init__(self, url):
