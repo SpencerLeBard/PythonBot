@@ -5792,3 +5792,46 @@ JavaScript error: , line 0: uncaught exception: Object
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1608145823962	geckodriver	INFO	Listening on 127.0.0.1:50639
+1608145827058	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\sleba\\AppData\\Local\\Temp\\rust_mozprofileocussA"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1608145830333	Marionette	INFO	Listening on port 50647
+1608145830783	Marionette	WARN	TLS certificate errors will be ignored for this session
+1608145838266	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:228:19
+TimedPromise@chrome://marionette/content/sync.js:213:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+JavaScript error: https://www.bestbuy.com/~assets/bby/_com/shop/product-documentation/dist/client/client-24acce3448eb6a64189bde87260ae193.mjs, line 1: Error: Loading chunk 1 failed.
+(error: https://www.bestbuy.com/~assets/bby/_com/shop/product-documentation/dist/client/1-24acce3448eb6a64189bde87260ae193.mjs)
+JavaScript error: https://www.bestbuy.com/~assets/bby/_com/shop/whats-included/dist/client/client-ac247edce9bd2b72a3fba317b7ebe052.mjs, line 1: ChunkLoadError: Loading chunk 1 failed.
+(error: https://www.bestbuy.com/~assets/bby/_com/shop/whats-included/dist/client/1-ac247edce9bd2b72a3fba317b7ebe052.mjs)
+JavaScript error: https://www.bestbuy.com/~assets/bby/_com/shop/product-features/dist/client/client-3dedd96b839bd30cf8d9ca29e15369d1.mjs, line 1: ChunkLoadError: Loading chunk 1 failed.
+(error: https://www.bestbuy.com/~assets/bby/_com/shop/product-features/dist/client/1-3dedd96b839bd30cf8d9ca29e15369d1.mjs)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: , line 0: uncaught exception: Object
+Marionette threw an error: TypeError: this.curBrowser.messageManager is null
+GeckoDriver.prototype.sendAsync@chrome://marionette/content/driver.js:361:5
+send/<@chrome://marionette/content/proxy.js:190:12
+send@chrome://marionette/content/proxy.js:124:12
+get/<@chrome://marionette/content/proxy.js:37:29
+GeckoDriver.prototype.sendKeysToElement@chrome://marionette/content/driver.js:2666:27
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+JavaScript error: https://www.bestbuy.com/~assets/bby/_com/analytics-dotcom/analyticsInit-8f9661a1685be65cc2851749e5596689.js, line 10: NS_ERROR_NOT_INITIALIZED: 
+1608145884129	Marionette	INFO	Stopped listening on port 50647
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
